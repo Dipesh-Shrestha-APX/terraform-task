@@ -1,12 +1,11 @@
+#OUTPUTS
 output "instance_id" {
-  value = aws_instance.ec2.id
+  value = module.ec2.instance_id
 }
-
 output "instance_ip" {
-  value = aws_instance.ec2.private_ip
+  value = module.ec2.instance_ip
 }
 
-output "bucket_name" {
-  value = aws_s3_bucket.s3.id
+output "s3_bucket_name" {
+  value = module.s3.bucket_name
 }
-
