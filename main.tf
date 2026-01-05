@@ -1,13 +1,13 @@
 resource "aws_instance" "ec2" {
-  ami           = "ami-068c0051b15cdb816"
-  instance_type = "t3.micro"
+  ami           = var.ami_id
+  instance_type = var.instance_Type
 
   tags = {
-    Name = "DipeshEC2"
+    Name = var.instance_Name
   }
 }
 
 resource "aws_s3_bucket" "s3" {
-  bucket        = "dipeshinternationalbucket"
-  force_destroy = true
+  bucket        = var.bucket_name
+  force_destroy = var.force_destroy
 }
