@@ -1,6 +1,6 @@
 # For the terraform folders and files
 .terraform/
-terraform/tfstate.d/
+terraform.tfstate.d/
 terraform.tfvars
 
 # Byte-compiled optimized / DLL files
